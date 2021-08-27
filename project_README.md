@@ -11,3 +11,5 @@ a good UI, for players to have good experiences
 -new question adder (or option to pass on a current question being asked)
 
 do everything in the console to start - need to utilize DOM manipulation
+
+https://dimilafl.github.io/index.html
