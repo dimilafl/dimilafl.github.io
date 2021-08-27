@@ -282,6 +282,30 @@ addButton.addEventListener("click", () => {
   //new add
   checkWinner();
 
+  //countdownTimer
+  ///////////////////////////////////////////////
+  let countdownTimer = 25;
+  let interval = setInterval(() => {
+    document.getElementById("countdownTimer").innerHTML = countdownTimer;
+    countdownTimer--;
+    if (countdownTimer === 0) {
+      clearInterval(interval);
+
+      document.getElementById("countdownTimer").innerHTML =
+        "Time is up! Move on to the next question";
+
+      score--;
+
+      scoreElement.innerText = score;
+
+      console.log(score);
+      console.log("~~~~~~");
+
+      alert("You're out of time!");
+    }
+  }, 1000);
+  ///////////////////////////////////////////////
+
   questionIterator();
 });
 
@@ -325,14 +349,8 @@ function answerChecker(event) {
 ///////////////////////////////////////////////
 //winning condition
 
-console.log(score);
-
 function checkWinner() {
   if (score === 10) {
-    console.log("score");
-
-    console.log("~~~~~~~~~~~~~~~");
-
     alert("You have won the game!!! Congratulations!!!");
   }
 }
@@ -345,10 +363,9 @@ buttonAcontainer.addEventListener("click", answerChecker);
 buttonBcontainer.addEventListener("click", answerChecker);
 
 buttonCcontainer.addEventListener("click", answerChecker);
+///////////////////////////////////////////////
 
 // console.log(correctInput);
-
-//now add winning conditions
 
 //check rubric
 
@@ -356,8 +373,8 @@ buttonCcontainer.addEventListener("click", answerChecker);
 
 //add questions
 
-//git PAGES!!!!!!!!!!
-//git PAGES!!!!!!!!!!
+//score issue
+
 //git PAGES!!!!!!!!!!
 
 //check for bugs
